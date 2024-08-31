@@ -4,7 +4,7 @@ background: images/cover.png
 class: 'text-center'
 highlighter: shiki
 lineNumbers: true
-title: "A quick introduction to Ruff and uv"
+title: "A quick introduction to uv and ruff"
 drawings:
   persist: false
 transition: fade
@@ -12,7 +12,7 @@ css: unocss
 ---
 
 # A quick introduction to 
-# Ruff and uv
+# uv and Ruff
 
 by [Martin Brochhaus](https://primal.net/p/npub1c80wmfpzc7dkghh93kxtrwpe5gdztynvnk2vy93ge68zmzwrm0yqq5h5s7)
 
@@ -145,6 +145,40 @@ uv-demo
 - `uv python dir`
 - `sysconfigpatcher ~/.local/share/uv/python/cpython-3.12.5-macos-aarch64-none`
 - `uv add uwsgi`
+
+---
+
+# Let's talk about ruff
+
+- Read the docs: [https://docs.astral.sh/ruff/](https://docs.astral.sh/ruff/)
+- Install: `uv tool install ruff --force`
+- Add this to `pyproject.toml`:
+  ```toml
+  [tool.ruff]
+  line-length = 80
+  ```
+
+---
+
+# Install VSCode extension
+
+- Install [VSCode extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+- In VSCode: `Ctrl+Shift+P` then `Open Workspace Settings (JSON)`
+- Add:
+  ```json
+  {
+    "editor.rulers": [
+        80
+    ],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "ruff.lint.extendSelect": [
+        "I"
+    ]
+  }
+  ```
+
+- That's it! Try to add some imports to `__init__.py` and see what happens...
 
 ---
 layout: end
