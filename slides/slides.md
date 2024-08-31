@@ -152,6 +152,7 @@ uv-demo
 
 - Read the docs: [https://docs.astral.sh/ruff/](https://docs.astral.sh/ruff/)
 - Install: `uv tool install ruff --force`
+- Now you can run ruff manually via `uv run ruff check .` or `uv run ruff format .`
 - Add this to `pyproject.toml`:
   ```toml
   [tool.ruff]
