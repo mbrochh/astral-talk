@@ -182,5 +182,12 @@ uv-demo
 - That's it! Try to add some imports to `__init__.py` and see what happens...
 
 ---
+
+# Join our Telegram group!
+
+<img src="/images/telegram.jpeg" class="h-[400px] mt-3" />
+
+
+---
 layout: end
 ---
